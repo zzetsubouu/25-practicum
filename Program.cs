@@ -10,6 +10,18 @@ namespace _25_practicum
     {
         static void Main(string[] args)
         {
+            var edition1 = new Edition("", "", 1800);
+            var edition2 = new Edition("каки", "пьяник", 2000);
+
+            Console.Write("введите название ");
+            string title = Console.ReadLine();
+            Console.Write("введите фаилю автора ");
+            string surname = Console.ReadLine();
+            Console.Write("введите год ");
+            int year = int.Parse(Console.ReadLine());
+            Edition edition3 = new Edition(title, surname, year);
+            Console.WriteLine($"{edition3.ToString()}\n{edition3.ToChangePublicationYear(year)}\n{edition3.FallIntoYear(year)}");
+            Console.ReadKey();
         }
     }
 }
